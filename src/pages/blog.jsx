@@ -3,7 +3,6 @@ import SingleBlogPost from "./single-blog-post";
 import { baseapi } from "../constants";
 
 const Blog = () => {
-  // const baseapi = import.meta.env.VITE_BASE_APP_LINK;
   // our api link
   // https://cohort2-blog-api.onrender.com/post/all-posts
 

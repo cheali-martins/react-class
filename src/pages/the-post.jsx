@@ -11,6 +11,8 @@ const ThePost = () => {
   const [post, setPost] = useState();
   console.log("from the post => ", params);
 
+  console.log("the link => ", baseapi);
+
   // function to get the single blog post
 
   console.log("posts inside post data state => ", post);
@@ -46,14 +48,6 @@ const ThePost = () => {
           dangerouslySetInnerHTML={{ __html: post?.post_content }}
         />
       </div>
-
-      <div className="flex items-center">
-        <button className="bg-blue-500 rounded-md px-2 py-1 font-semibold">
-          <Link to="/blog">Back to blog</Link>
-        </button>
-      </div>
-
-
     </div>
   );
 };

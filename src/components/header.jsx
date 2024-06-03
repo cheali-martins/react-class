@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link, NavLink, useLocation, useParams } from "react-router-dom";
-import { MdMenu } from "react-icons/md";
-import { NavigationArray } from "./headerlinks";
 
 const Header = () => {
 
@@ -10,9 +8,6 @@ const Header = () => {
 
   console.log(" the pathname from params => ", pathname);
   console.log(" the pathname from params again => ", pathname2.pathname);
-
-  // state for mobile
-  const [openHeader, setOpenHeader] = useState(false)
 
   return (
     <div className="flex items-center space-x-2 justify-between p-3">
@@ -78,3 +73,10 @@ export default Header;
 {/* <Link to="/blog">Blog</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/contact">Contact</Link> */}
+        </nav >
+      </div >
+    </div >
+  );
+};
+
+export default Header;
