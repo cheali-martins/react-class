@@ -73,10 +73,4 @@ export default Header;
 {/* <Link to="/blog">Blog</Link>
           <Link to="/profile">Profile</Link>
           <Link to="/contact">Contact</Link> */}
-        </nav >
-      </div >
-    </div >
-  );
-};
 
-export default Header;
