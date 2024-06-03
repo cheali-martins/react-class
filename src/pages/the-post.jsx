@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { baseapi } from "../constants";
 
 const ThePost = () => {
+  // base api link
+  // const baseapi = import.meta.env.VITE_BASE_API_LINK;
+  // console.log("the link => ", baseapi);
+
   const params = useParams();
   const [post, setPost] = useState();
   console.log("from the post => ", params);
@@ -12,9 +17,7 @@ const ThePost = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(
-        `https://cohort2-blog-api.onrender.com/post/${params.slug}`
-      );
+      const response = await fetch(`${baseapi}/post/${params.slug}`);
       const fullresponse = response.json();
       return fullresponse;
     } catch (error) {
@@ -43,6 +46,14 @@ const ThePost = () => {
           dangerouslySetInnerHTML={{ __html: post?.post_content }}
         />
       </div>
+
+      <div className="flex items-center">
+        <button className="bg-blue-500 rounded-md px-2 py-1 font-semibold">
+          <Link to="/blog">Back to blog</Link>
+        </button>
+      </div>
+
+
     </div>
   );
 };
