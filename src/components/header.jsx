@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink, useLocation, useParams } from "react-router-dom";
+import { NavigationArray } from "./headerlinks";
+import { MdMenu } from "react-icons/md";
 
 const Header = () => {
 
@@ -8,6 +10,8 @@ const Header = () => {
 
   console.log(" the pathname from params => ", pathname);
   console.log(" the pathname from params again => ", pathname2.pathname);
+
+  const [openHeader, setOpenHeader] = useState(false);
 
   return (
     <div className="flex items-center space-x-2 justify-between p-3">
@@ -29,6 +33,7 @@ const Header = () => {
         </nav>
 
         {/* mobile view */}
+
         <nav className="lg:hidden">
           <MdMenu className="text-red-600 w-10 h-10 cursor-pointer" onClick={() => setOpenHeader(current => !current)} />
           {openHeader && (

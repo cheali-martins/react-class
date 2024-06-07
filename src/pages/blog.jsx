@@ -13,7 +13,7 @@ const Blog = () => {
   const fetchData = async () => {
     try {
       const response = await fetch(`${baseapi}/post/all-posts`);
-      const fullresponse = response.json();
+      const fullresponse = await response.json();
       return fullresponse;
     } catch (error) {
       console.log(error);
